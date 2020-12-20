@@ -20,6 +20,7 @@ struct Sections: Codable {
     
     enum CodingKeys: String, CodingKey {
         case item = "itemData"
+        case name = "name"
     }
 }
 

@@ -11,6 +11,12 @@
 		5428C2342590054B002261C4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C2332590054B002261C4 /* MainTableViewCell.xib */; };
 		5428C2352590054B002261C4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C2332590054B002261C4 /* MainTableViewCell.xib */; };
 		5428C2362590054B002261C4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C2332590054B002261C4 /* MainTableViewCell.xib */; };
+		5428C23B25900F11002261C4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428C23A25900F11002261C4 /* CollectionViewCell.swift */; };
+		5428C23C25900F11002261C4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428C23A25900F11002261C4 /* CollectionViewCell.swift */; };
+		5428C23D25900F11002261C4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428C23A25900F11002261C4 /* CollectionViewCell.swift */; };
+		5428C24225900FA7002261C4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C24125900FA7002261C4 /* CollectionViewCell.xib */; };
+		5428C24325900FA7002261C4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C24125900FA7002261C4 /* CollectionViewCell.xib */; };
+		5428C24425900FA7002261C4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C24125900FA7002261C4 /* CollectionViewCell.xib */; };
 		5462B078258FB22F001A8339 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462B077258FB22F001A8339 /* ResponseModels.swift */; };
 		5462B079258FB22F001A8339 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462B077258FB22F001A8339 /* ResponseModels.swift */; };
 		5462B07A258FB22F001A8339 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462B077258FB22F001A8339 /* ResponseModels.swift */; };
@@ -63,6 +69,8 @@
 		19AC028B4F160CBC84280055 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		456D9E6DC2E9E002A1F56953 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		5428C2332590054B002261C4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		5428C23A25900F11002261C4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5428C24125900FA7002261C4 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		5462B077258FB22F001A8339 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		5462B081258FB247001A8339 /* AlamoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoClass.swift; sourceTree = "<group>"; };
 		5462B092258FE318001A8339 /* SharedMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMethods.swift; sourceTree = "<group>"; };
@@ -153,6 +161,8 @@
 			children = (
 				54C6624D258FFE4C0093EA5F /* MainTableViewCell.swift */,
 				5428C2332590054B002261C4 /* MainTableViewCell.xib */,
+				5428C23A25900F11002261C4 /* CollectionViewCell.swift */,
+				5428C24125900FA7002261C4 /* CollectionViewCell.xib */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -341,6 +351,7 @@
 				54C9D3C5258FAE3900EB6229 /* Assets.xcassets in Resources */,
 				5428C2342590054B002261C4 /* MainTableViewCell.xib in Resources */,
 				54C9D3C3258FAE3900EB6229 /* Main.storyboard in Resources */,
+				5428C24225900FA7002261C4 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5428C24325900FA7002261C4 /* CollectionViewCell.xib in Resources */,
 				5428C2352590054B002261C4 /* MainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5428C24425900FA7002261C4 /* CollectionViewCell.xib in Resources */,
 				5428C2362590054B002261C4 /* MainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +432,7 @@
 				5462B082258FB247001A8339 /* AlamoClass.swift in Sources */,
 				5462B093258FE318001A8339 /* SharedMethods.swift in Sources */,
 				5462B09D258FF4E7001A8339 /* Extensions.swift in Sources */,
+				5428C23B25900F11002261C4 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +442,7 @@
 			files = (
 				5462B0A8258FF6CB001A8339 /* Settings.swift in Sources */,
 				5462B09E258FF4E7001A8339 /* Extensions.swift in Sources */,
+				5428C23C25900F11002261C4 /* CollectionViewCell.swift in Sources */,
 				54C6624F258FFE4C0093EA5F /* MainTableViewCell.swift in Sources */,
 				5462B079258FB22F001A8339 /* ResponseModels.swift in Sources */,
 				5462B0AF258FF798001A8339 /* NetworkManager.swift in Sources */,
@@ -443,6 +458,7 @@
 			files = (
 				5462B0A9258FF6CB001A8339 /* Settings.swift in Sources */,
 				5462B09F258FF4E7001A8339 /* Extensions.swift in Sources */,
+				5428C23D25900F11002261C4 /* CollectionViewCell.swift in Sources */,
 				54C66250258FFE4C0093EA5F /* MainTableViewCell.swift in Sources */,
 				5462B07A258FB22F001A8339 /* ResponseModels.swift in Sources */,
 				5462B0B0258FF798001A8339 /* NetworkManager.swift in Sources */,
