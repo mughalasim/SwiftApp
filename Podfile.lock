@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 5528ebb5ac3554e1aad33ee9b6e7098e2309c1e3
+PODS:
+  - Alamofire (4.9.1)
+  - SwiftyJSON (4.3.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.0)
+  - SwiftyJSON (~> 4.1)
+  - Toast-Swift (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftyJSON
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 38e316d8fd8c06b773cf7b2e62fcb73d961f349a
 
 COCOAPODS: 1.10.0
