@@ -17,6 +17,9 @@
 		5428C24225900FA7002261C4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C24125900FA7002261C4 /* CollectionViewCell.xib */; };
 		5428C24325900FA7002261C4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C24125900FA7002261C4 /* CollectionViewCell.xib */; };
 		5428C24425900FA7002261C4 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5428C24125900FA7002261C4 /* CollectionViewCell.xib */; };
+		5429096A25910FC00091B7DB /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429096925910FC00091B7DB /* screen.png */; };
+		5429096B25910FC00091B7DB /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429096925910FC00091B7DB /* screen.png */; };
+		5429096C25910FC00091B7DB /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429096925910FC00091B7DB /* screen.png */; };
 		5462B078258FB22F001A8339 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462B077258FB22F001A8339 /* ResponseModels.swift */; };
 		5462B079258FB22F001A8339 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462B077258FB22F001A8339 /* ResponseModels.swift */; };
 		5462B07A258FB22F001A8339 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462B077258FB22F001A8339 /* ResponseModels.swift */; };
@@ -71,6 +74,7 @@
 		5428C2332590054B002261C4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		5428C23A25900F11002261C4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		5428C24125900FA7002261C4 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		5429096925910FC00091B7DB /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
 		5462B077258FB22F001A8339 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		5462B081258FB247001A8339 /* AlamoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoClass.swift; sourceTree = "<group>"; };
 		5462B092258FE318001A8339 /* SharedMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMethods.swift; sourceTree = "<group>"; };
@@ -139,6 +143,14 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		5429096825910FB10091B7DB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5429096925910FC00091B7DB /* screen.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		5462B074258FB1F5001A8339 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +199,7 @@
 		54C9D3AF258FAE3900EB6229 = {
 			isa = PBXGroup;
 			children = (
+				5429096825910FB10091B7DB /* Images */,
 				54C9D3BA258FAE3900EB6229 /* SwiftApp */,
 				54C9D3D1258FAE3900EB6229 /* SwiftAppTests */,
 				54C9D3DC258FAE3900EB6229 /* SwiftAppUITests */,
@@ -364,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C9D3C8258FAE3900EB6229 /* LaunchScreen.storyboard in Resources */,
+				5429096A25910FC00091B7DB /* screen.png in Resources */,
 				54C9D3C5258FAE3900EB6229 /* Assets.xcassets in Resources */,
 				5428C2342590054B002261C4 /* MainTableViewCell.xib in Resources */,
 				54C9D3C3258FAE3900EB6229 /* Main.storyboard in Resources */,
@@ -376,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5428C24325900FA7002261C4 /* CollectionViewCell.xib in Resources */,
+				5429096B25910FC00091B7DB /* screen.png in Resources */,
 				5428C2352590054B002261C4 /* MainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5428C24425900FA7002261C4 /* CollectionViewCell.xib in Resources */,
+				5429096C25910FC00091B7DB /* screen.png in Resources */,
 				5428C2362590054B002261C4 /* MainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
