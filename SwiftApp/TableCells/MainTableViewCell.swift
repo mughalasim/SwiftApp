@@ -12,6 +12,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
     @IBOutlet weak var txtSectionName: UILabel!
     @IBOutlet weak var viewMore: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    let collectionIdentifier = "CollectionViewCell"
     
     var items: [ItemModel]?
     
@@ -19,10 +20,10 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
         super.awakeFromNib()
         
         // Adding a nested collection view inside each table view cell
-        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
-    
+        SharedMethods.registerCollectionView(collectionView, collectionIdentifier)
+
     }
     
     public func setData(_ section: Sections){
@@ -30,7 +31,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
         let subArray = section.item?.prefix(Settings.shared.MAX_HORIZONTAL_ITEMS)
         items = Array(subArray ?? [])
         self.txtSectionName.text = section.name ?? "No section name"
-        if (items?.count ?? 0 > Settings.shared.MAX_HORIZONTAL_ITEMS){
+        if (section.item?.count ?? 0 > Settings.shared.MAX_HORIZONTAL_ITEMS){
             self.viewMore.alpha = 1
         } else {
             self.viewMore.alpha = 0
@@ -45,7 +46,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let i =  indexPath.row
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionIdentifier, for: indexPath) as! CollectionViewCell
         cell.setData(items?[i].meta, items?[i].media)
         return cell
     }

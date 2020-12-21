@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtNoResults: UILabel!
     var refreshControl = UIRefreshControl()
+    let cellIdentifier = "MainTableViewCell"
     
     
     // MARK: - CLASS OVERRIDE METHODS ---------------------------------------------------------
@@ -21,8 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Set up the tableview
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorColor = UIColor.white
-        tableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainTableViewCell")
+        SharedMethods.registerTableView(tableView, cellIdentifier)
         
         // Add a refresh control to swipe down and refetch the data
         refreshControl.addTarget(self, action: #selector(self.refreshPulled(_:)), for: .valueChanged)
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MainTableViewCell
         // Only show the sections if the list is not empty
         if (MainResult.shared?.sections.count ?? 0 > 0){
             cell.setData((MainResult.shared?.sections[indexPath.row])!)

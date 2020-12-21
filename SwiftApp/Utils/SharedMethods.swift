@@ -21,7 +21,7 @@ class SharedMethods {
         n %= 60
         let seconds = (n).format(pattern: "%02d")
         
-        return "\(hour):\(minutes):\(seconds)"
+        return "  \(hour):\(minutes):\(seconds)"
     }
     
     // SHOW TOAST -----------------------------------------------------------------------------
@@ -58,6 +58,16 @@ class SharedMethods {
         #if DEBUG
         print(message)
         #endif
+    }
+    
+    // REGISTER TABLEVIEW ---------------------------------------------------------------------
+    static func registerTableView (_ tableView: UITableView , _ nibName: String) {
+        tableView.separatorColor = UIColor.white
+        tableView.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: nibName)
+    }
+    
+    static func registerCollectionView (_ collectionView: UICollectionView , _ nibName: String) {
+        collectionView.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
     }
     
 }

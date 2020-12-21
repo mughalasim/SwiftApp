@@ -17,7 +17,7 @@ class CollectionViewCell: UICollectionViewCell {
     public func setData(_ meta: MetaModel?, _ media: MediaModel?) {
         videoTitle.text = meta?.title ?? "No title"
         videoDesc.text = meta?.body ?? "No desc"
-        videoDuration.text = SharedMethods.getTimeFromMinutes(meta?.duration ?? 0)
-        
+        videoDuration.text = SharedMethods.getTimeFromMinutes(Int(meta?.duration ?? 0))
+        image.loadImage(from: media?.url ?? "")
     }
 }

@@ -26,7 +26,7 @@ struct Settings {
     private init() {
         BASE_URL = "https://thefa-cm.streamamg.com/api/v1/"
         MAX_HORIZONTAL_ITEMS = 6
-        HORIZONTAL_ITEMS_HEIGHT = 250.0
+        HORIZONTAL_ITEMS_HEIGHT = 300.0
         HORIZONTAL_ITEMS_WIDTH = 320.0
         
         MESSAGE_DEFAULT_ERROR_INTERNAL = "An internal error occured, We are looking into this urgently"

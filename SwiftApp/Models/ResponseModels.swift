@@ -36,12 +36,12 @@ struct ItemModel: Codable {
 
 struct MetaModel: Codable {
     var title: String?
-    var duration: Int?
+    var duration: Double
     var body: String?
     
     enum CodingKeys: String, CodingKey {
         case title = "title"
-        case duration = "videoDuration"
+        case duration = "VideoDuration"
         case body = "body"
     }
 }
