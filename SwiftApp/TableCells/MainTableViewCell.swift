@@ -7,11 +7,13 @@
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var txtSectionName: UILabel!
     @IBOutlet weak var viewMore: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var items: [ItemModel]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,22 +22,36 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollecti
         collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
+    
     }
     
+    public func setData(_ section: Sections){
+        // Only need to show a certain number of items and the rest depend on the view more option
+        let subArray = section.item?.prefix(Settings.shared.MAX_HORIZONTAL_ITEMS)
+        items = Array(subArray ?? [])
+        self.txtSectionName.text = section.name ?? "No section name"
+        if (items?.count ?? 0 > Settings.shared.MAX_HORIZONTAL_ITEMS){
+            self.viewMore.alpha = 1
+        } else {
+            self.viewMore.alpha = 0
+        }
+    }
+    
+    
+    // COLLECTION VIEW CELL -------------------------------------------------------------------
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return items?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath)
-
-                if let collectionViewCell = cell as? CollectionViewCell {
-                    // TODO: configure cell
-//                    collectionViewCell.title.text = 
-                }
-
+        let i =  indexPath.row
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.setData(items?[i].meta, items?[i].media)
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Settings.shared.HORIZONTAL_ITEMS_WIDTH, height: collectionView.frame.height)
+    }
 
 }

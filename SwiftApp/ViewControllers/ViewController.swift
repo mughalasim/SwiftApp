@@ -63,21 +63,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return Settings.shared.HORIZONTAL_ITEMS_HEIGHT
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell") as! MainTableViewCell
-        let i = indexPath.row
-        cell.txtSectionName.text = MainResult.shared?.sections[i].name ?? "No section name"
-        if (MainResult.shared?.sections[i].item?.count ?? 0 > Settings.shared.MAX_HORIZONTAL_ITEMS){
-            cell.viewMore.alpha = 1
-        } else {
-            cell.viewMore.alpha = 0
+        // Only show the sections if the list is not empty
+        if (MainResult.shared?.sections.count ?? 0 > 0){
+            cell.setData((MainResult.shared?.sections[indexPath.row])!)
         }
         return cell
-        
     }
-    
-    
     
 }
 
